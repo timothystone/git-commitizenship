@@ -22,16 +22,33 @@
  * THE SOFTWARE.
  */
 
-package com.anothercaffeinatedday.demo.commitizenship;
+package com.anothercaffeinatedday.demo.commitizenship.controller;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+import com.anothercaffeinatedday.demo.commitizenship.model.Greeting;
+import java.util.concurrent.atomic.AtomicLong;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
-@SpringBootTest
-class CommitizenshipApplicationTests {
+/**
+ * The Greeting REST Controller.
+ * 
+ * @author timothystone
+ */
+@RestController
+public class GreetingController {
 
-	@Test
-	void contextLoads() {
+	private static final String TEMPLATE = "My name is %s.";
+	private final AtomicLong counter = new AtomicLong();
+
+  /**
+   * The Greeting resource.
+   * 
+   * @param name the greeting subject.
+   * @return {@link Greeting} record.
+   */
+	@GetMapping("/greeting")
+	public Greeting greeting(@RequestParam(value = "name", defaultValue = "Tony") String name) {
+		return new Greeting(counter.incrementAndGet(), String.format(TEMPLATE, name));
 	}
-
 }

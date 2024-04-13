@@ -22,16 +22,12 @@
  * THE SOFTWARE.
  */
 
-package com.anothercaffeinatedday.demo.commitizenship;
+package com.anothercaffeinatedday.demo.commitizenship.model;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
-
-@SpringBootTest
-class CommitizenshipApplicationTests {
-
-	@Test
-	void contextLoads() {
-	}
-
+/**
+ *
+ * @author timothystone
+ */
+public record Greeting(long id, String content) {
+  
 }
