@@ -1,41 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.2.4</version>
-		<relativePath/> <!-- lookup parent from repository -->
-	</parent>
-	<groupId>com.anothercaffeinatedday.demo</groupId>
-	<artifactId>commitizenship</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>commitizenship</name>
-	<description>Getting from XKCD 1296 to Automated Versioning in the Pipeline</description>
-	<properties>
-		<java.version>17</java.version>
-	</properties>
-	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
 
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-	</dependencies>
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>3.2.4</version>
+    <relativePath></relativePath>    <!-- lookup parent from repository -->
+  </parent>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
+  <groupId>com.anothercaffeinatedday.demo</groupId>
+  <artifactId>commitizenship</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <name>commitizenship</name>
+  <description>Getting from XKCD 1296 to Automated Versioning in the Pipeline</description>
+  <inceptionYear>2024</inceptionYear>
 
+  <licenses>
+    <license>
+      <name>MIT</name>
+      <url>https://opensource.org/licenses/MIT</url>
+    </license>
+  </licenses>
+
+  <developers>
+    <developer>
+      <id>timothystone</id>
+      <name>Timothy Stone</name>
+      <email>gitlab@petmystone.com</email>
+      <roles>
+        <role>architect</role>
+        <role>creator</role>
+      </roles>
+      <timezone>America/New_York</timezone>
+      <properties>
+        <avatar>https://gravatar.com/avatar/6d113d4c7d893b6bb96e30e36e7905fe</avatar>
+        <gpg.public-key>https://keys.openpgp.org/vks/v1/by-fingerprint/3E66175B263B9BB566F2062DC79372064388F770</gpg.public-key>
+      </properties>
+    </developer>
+  </developers>
+
+  <scm>
+    <connection>scm:git:https://gitlab.com/another15y/git-commitizenship.git</connection>
+    <developerConnection>scm:git:https://gitlab.com/another15y/git-commitizenship.git</developerConnection>
+    <tag>HEAD</tag>
+    <url>https://gitlab.com/another15y/git-commitizenship</url>
+  </scm>
+
+  <distributionManagement>
+    <repository>
+      <id>gitlab-maven</id>
+      <url>https://gitlab.com/api/v4/projects/55738166/packages/maven</url>
+    </repository>
+    <snapshotRepository>
+      <id>gitlab-maven</id>
+      <url>https://gitlab.com/api/v4/projects/55738166/packages/maven</url>
+    </snapshotRepository>
+  </distributionManagement>
+
+  <properties>
+    <java.version>17</java.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <repositories>
+    <repository>
+      <id>gitlab-maven</id>
+      <url>https://gitlab.com/api/v4/projects/55738166/packages/maven</url>
+    </repository>
+  </repositories>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
 </project>
