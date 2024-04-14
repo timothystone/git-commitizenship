@@ -1,0 +1,26 @@
+{
+  "scripts": {
+    "test": "echo No tests && exit 0"
+  },
+  "name": "git-commitizenship",
+  "version": "1.0.0",
+  "description": "Getting from XKCD 1296 to Automated Versioning in the Pipeline",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/another15y/git-commitizenship.git"
+  },
+  "keywords": [
+    "husky",
+    "commitlint",
+    "conventional-commits"
+  ],
+  "author": "Timothy Stone <tstone@petmystone.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/another15y/git-commitizenship/issues"
+  },
+  "homepage": "https://gitlab.com/another15y/git-commitizenship#readme"
+}
