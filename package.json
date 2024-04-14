@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "test": "echo No tests && exit 0"
+    "info:skip-tests":"./scripts/skip_tests.sh",
+    "test": "npm run info:skip-tests && mvn clean test ${SKIP_TESTS+-Dmaven.test.skip=true}"
   },
   "name": "git-commitizenship",
   "version": "1.0.0",
