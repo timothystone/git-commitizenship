@@ -1,7 +1,8 @@
 {
   "scripts": {
-    "info:skip-tests":"./scripts/skip_tests.sh",
-    "test": "npm run info:skip-tests && mvn clean test ${SKIP_TESTS+-Dmaven.test.skip=true}"
+    "info:skip-tests": "./scripts/skip_tests.sh",
+    "test": "npm run info:skip-tests && mvn clean test ${SKIP_TESTS+-Dmaven.test.skip=true}",
+    "prepare": "is-ci || husky"
   },
   "name": "git-commitizenship",
   "version": "1.0.0",
@@ -23,5 +24,11 @@
   "bugs": {
     "url": "https://gitlab.com/another15y/git-commitizenship/issues"
   },
-  "homepage": "https://gitlab.com/another15y/git-commitizenship#readme"
+  "homepage": "https://gitlab.com/another15y/git-commitizenship#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^19.2.2",
+    "@commitlint/config-conventional": "^19.2.2",
+    "husky": "^9.0.11",
+    "is-ci": "^3.0.1"
+  }
 }
