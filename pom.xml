@@ -104,12 +104,6 @@
                 <nodeVersion>${node.version}</nodeVersion>
               </configuration>
             </execution>
-            <execution>
-              <id>npm install</id>
-              <goals>
-                <goal>npm</goal>
-              </goals>
-            </execution>
           </executions>
         </plugin>
       </plugins>
@@ -125,4 +119,25 @@
       </plugin>
     </plugins>
   </build>
+  <profiles>
+    <profile>
+      <id>husky</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>com.github.eirslett</groupId>
+            <artifactId>frontend-maven-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>npm install</id>
+                <goals>
+                  <goal>npm</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
 </project>
