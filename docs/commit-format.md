@@ -1,7 +1,3 @@
----
-mainfont: gillius
----
-
 # The Basic and Default Commit Format
 
 ```text
