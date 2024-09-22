@@ -35,7 +35,7 @@
       <timezone>America/New_York</timezone>
       <properties>
         <avatar>https://gravatar.com/avatar/6d113d4c7d893b6bb96e30e36e7905fe</avatar>
-        <gpg.public-key>https://keys.openpgp.org/vks/v1/by-fingerprint/3E66175B263B9BB566F2062DC79372064388F770</gpg.public-key>
+        <gpg.public-key>https://keys.openpgp.org/vks/v1/by-fingerprint/1089697C004B3250B386D036CD786AA32ABF4F9F</gpg.public-key>
       </properties>
     </developer>
   </developers>
